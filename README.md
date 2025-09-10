@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 VibeCode Editor
 
-## Getting Started
+A full-featured **browser-based coding environment** with AI-powered assistance.  
+Built with **Next.js**, **WebContainer**, **Monaco Editor** and **TypeScript**, VibeCode Editor lets you instantly spin up projects, edit code, run it in the browser and get AI suggestions & completions — just like a personal Copilot.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+- 🌐 **In-browser runtime** using [WebContainer](https://webcontainers.io/) — run Node.js projects entirely in your browser.
+- 📝 **Rich code editor** powered by [Monaco Editor](https://microsoft.github.io/monaco-editor/).
+- 🧠 **AI Copilot**:
+  - Chat with the AI about your code.
+  - Get real-time code completions.
+  - Model: `qwen/qwen3-coder` via [OpenRouter](https://openrouter.ai/).
+- 📦 **Project Templates** (TypeScript):
+  - React
+  - Next.js
+  - Express
+  - Hono
+  - Vue
+  - Angular  
+  *(choose a template and start coding instantly)*
+
+- 🗄 **Database**: MongoDB Atlas + Prisma ORM for user/projects metadata.
+- ⚡ Run, edit and save projects all inside the browser — no local setup required.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: Next.js 15 (App Router), TypeScript, TailwindCSS, ShadCN, XTerm, Zustand
+- **Editor**: Monaco Editor
+- **Runtime**: WebContainer (Node.js in the browser)
+- **AI**: qwen/qwen3-coder via OpenRouter (chat + completions)
+- **Database**: MongoDB Atlas
+- **ORM**: Prisma
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+git clone https://github.com/dibakarghosh03/vibe-code-editor
+cd vibe-code-editor
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a `.env.local` file in the root directory and set the following variables:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# Database (MongoDB Atlas)
+DATABASE_URL=
 
-## Learn More
+# Auth secret for NextAuth (or custom auth)
+AUTH_SECRET=
 
-To learn more about Next.js, take a look at the following resources:
+# GitHub OAuth credentials
+GITHUB_ID=
+GITHUB_SECRET=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Google OAuth credentials
+GOOGLE_ID=
+GOOGLE_SECRET=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# OpenRouter API key for AI assistant
+OPENROUTER_API_KEY=
+```
 
-## Deploy on Vercel
+## 🧠 How It Works
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Template Selection**  
+   User picks a template (**React**, **Next.js**, **Express**, **Hono**, **Vue**, **Angular**) — all in TypeScript.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **WebContainer**  
+   Spins up a full **Node.js environment** directly in the browser with the chosen template.
+
+3. **Monaco Editor**  
+   Loads the project files with:
+   - Syntax highlighting  
+   - IntelliSense  
+   - Rich editing features
+
+4. **AI Assistant**  
+   Powered by [OpenRouter](https://openrouter.ai/) **qwen/qwen3-coder** model:  
+   - 💡 Code completions  
+   - 💬 In-editor chat & help
+
+5. **Prisma + MongoDB Atlas**  
+   Stores:
+   - User sessions  
+   - Project metadata  
+   - File structures
+
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!  
+Feel free to check [issues page](./issues) or open a pull request.
+
+
+## 👨‍💻 Author
+
+Made with ❤️ by [Dibakar Ghosh](https://github.com/dibakarghosh03)
