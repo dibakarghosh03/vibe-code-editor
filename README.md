@@ -41,7 +41,7 @@ Built with **Next.js**, **WebContainer**, **Monaco Editor** and **TypeScript**, 
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/dibakarghosh03/vibe-code-editor
+git clone https://github.com/dibakarghosh03/vibe-code-editor.git
 cd vibe-code-editor
 npm install
 npm run dev
